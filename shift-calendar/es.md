@@ -12,7 +12,7 @@ title: "Política de privacidad de Shift Calendar"
 </nav>
 # Política de privacidad de Shift Calendar
 
-Fecha de entrada en vigor: 31 de agosto de 2026
+Fecha de entrada en vigor: 20 de septiembre de 2026
 
 Esta Política de privacidad se aplica a las siguientes aplicaciones proporcionadas por LumenWorks:
 
@@ -24,7 +24,7 @@ LumenWorks ("nosotros", "nuestro" o "el desarrollador") valora la privacidad de 
 
 ## 1. Información que recopilamos
 
-La Aplicación no ofrece registro de cuentas y no recopilamos por separado información personal directa, como su nombre, número de identificación nacional, número de teléfono o dirección.
+La mayoría de las funciones no requieren una cuenta. Si decide usar la función opcional Horario familiar, se crea una cuenta de uso compartido de Firebase mediante el inicio de sesión con Google. Firebase Authentication puede tratar el identificador de usuario, correo electrónico, nombre visible y demás datos necesarios para iniciar sesión. La Aplicación no recopila ni almacena la contraseña de su cuenta de Google.
 
 Para proporcionar las funciones de la Aplicación, la siguiente información puede almacenarse en su dispositivo:
 
@@ -40,6 +40,8 @@ Para proporcionar las funciones de la Aplicación, la siguiente información pue
 - número de partidas, puntuaciones, récords, progreso y ajustes de audio de los minijuegos
 - estado y fecha de vencimiento de los beneficios de eliminación de publicidad
 - estado interno usado para determinar los intervalos de anuncios intersticiales y los beneficios de anuncios recompensados
+
+Al activar Horario familiar, Firebase puede almacenar identificadores de usuario, relaciones e invitaciones, política y revisión del uso compartido, zona horaria y marcas de tiempo; además de las fechas, tipos, orden, colores y horas de turnos, categorías y cantidades de asistencia, y datos de horas extra que usted elija compartir. Firebase App Check también puede tratar información técnica de integridad de la aplicación y del dispositivo para prevenir abusos. No se suben notas, salarios, estimaciones de pago, tarifas por hora, saldos de asistencia ni el contenido original de calendarios externos. Los documentos de relación no almacenan correos electrónicos ni URL de fotos.
 
 Salvo cuando se indica en esta política, esta información se usa para proporcionar las funciones de la Aplicación y no se transmite a nuestros propios servidores.
 
@@ -57,6 +59,7 @@ La Aplicación trata la información descrita anteriormente para:
 - proporcionar un periodo sin publicidad después de ver un anuncio recompensado
 - aplicar ajustes de funciones y políticas de funcionamiento
 - prevenir errores y mantener la estabilidad del servicio
+- compartir los datos de horario seleccionados, mostrar los horarios recibidos y gestionar invitaciones, relaciones y eliminación de la cuenta
 
 ## 3. Permisos de la Aplicación
 
@@ -74,6 +77,10 @@ Si elige la copia de seguridad en Google Drive, se puede usar la autorización d
 
 Si elige la integración con un calendario externo, la Aplicación puede solicitar permisos de lectura y escritura del calendario para mostrar calendarios y eventos o para crear, actualizar y eliminar notas u horarios de trabajo en el calendario que seleccione. Esta función es opcional y el resto de la Aplicación seguirá disponible si no concede estos permisos. Los datos del calendario externo también se rigen por las políticas del proveedor de calendario del dispositivo y de la cuenta conectada.
 
+### D. Inicio de sesión de Horario familiar
+
+El inicio de sesión con Google para Horario familiar se procesa en un proyecto de Firebase independiente y no concede acceso a las copias de seguridad de Google Drive. Cerrar sesión o eliminar la cuenta compartida no borra el horario original guardado en el teléfono.
+
 ## 4. Copia de seguridad con Google Drive
 
 La Aplicación proporciona copias de seguridad y restauración con Google Drive solo cuando decide usar esta función.
@@ -84,6 +91,10 @@ La Aplicación proporciona copias de seguridad y restauración con Google Drive 
 - Puede crear manualmente una copia de seguridad local.
 - Las copias pueden incluir horarios, asistencia, notas, ajustes y otros datos necesarios para usar la Aplicación.
 - No examinamos de forma arbitraria ni recopilamos por separado el contenido de los archivos de copia de seguridad almacenados en su Google Drive.
+
+## 4-1. Uso compartido de Horario familiar
+
+Solo se publica en Firebase Firestore después de que usted active la función y elija qué campos compartir. El intervalo publicado, según la zona horaria del emisor, comprende el mes anterior, el mes actual y los cuatro siguientes. Las invitaciones son de un solo uso y caducan como máximo en 24 horas según la hora del servidor. El destinatario solo puede leer los meses autorizados y pierde el acceso futuro al eliminarse la relación. La hora exacta de horas extra está desactivada de forma predeterminada. La función usa únicamente la cuota gratuita Spark de Firebase; si se agota, esta función puede quedar temporalmente limitada sin cargos automáticos.
 
 ## 5. Servicios publicitarios
 
@@ -124,6 +135,7 @@ La Aplicación puede utilizar los siguientes servicios de terceros:
 - Google Drive: copia de seguridad y restauración de datos de la Aplicación
 - Google AdMob: publicidad dentro de la Aplicación, medición del rendimiento publicitario y gestión de calidad publicitaria
 - Firebase Remote Config: ajustes remotos de funciones y políticas publicitarias
+- Firebase Authentication, Firestore, App Check y Hosting: inicio de sesión opcional de Horario familiar, almacenamiento y transferencia de datos compartidos, prevención de abusos, invitaciones y página de eliminación de cuenta
 - Google User Messaging Platform: gestión del consentimiento publicitario y de las opciones de privacidad
 - proveedor de calendario del dispositivo: lectura o escritura de eventos solo para la función opcional de calendario externo
 
@@ -151,13 +163,19 @@ La información sobre la aplicación y el vencimiento del beneficio de eliminaci
 
 Los eventos creados por la Aplicación en un calendario externo pueden permanecer allí después de desinstalar la Aplicación. Puede gestionarlos mediante las funciones de sincronización de la Aplicación o desde su aplicación de calendario.
 
+### E. Cuenta y datos del servidor de Horario familiar
+
+Puede eliminar la cuenta compartida y los datos del servidor desde la Aplicación o, sin reinstalarla, en `https://lumenworks-schedule-sharing.web.app/delete-account/` con la misma cuenta de Google. Primero se eliminan relaciones, invitaciones y meses publicados, y la cuenta de Firebase Authentication se elimina al final. Si interrumpe el proceso, debe volver a iniciar sesión para continuarlo.
+
+Puede permanecer un registro mínimo de estado de eliminación con la ruta del identificador de Firebase, el estado `DELETING` y horas del servidor, sin horarios, correo ni nombre visible. Si elimina primero la cuenta de Google, la limpieza realizada por el cliente puede no completarse; use antes la ruta de eliminación anterior o póngase en contacto con nosotros si perdió el acceso.
+
 ## 10. Comunicación de información personal
 
-No recopilamos directamente su información personal para venderla ni para proporcionarla a terceros a nuestra discreción. Cuando usa una función opcional, servicios de terceros como Google Drive, Google AdMob y Firebase Remote Config pueden tratar información conforme a sus propias políticas para proporcionar esa función.
+No vendemos su información personal ni la proporcionamos a terceros a nuestra discreción. Google Drive, Google AdMob, Firebase, el inicio de sesión con Google y los proveedores de calendario pueden tratar información para las finalidades descritas. A un destinatario de Horario familiar solo se le muestran los campos que usted elige compartir.
 
 ## 11. Privacidad de menores
 
-La Aplicación no proporciona funciones independientes de registro de cuentas ni de recopilación de información personal para menores de 14 años. Si tenemos conocimiento de que hemos recopilado intencionadamente información personal de un menor, tomaremos las medidas exigidas por la ley aplicable.
+La función de cuenta de Horario familiar no está dirigida a menores de 14 años. Si tenemos conocimiento de que hemos recopilado intencionadamente información personal de un menor, tomaremos las medidas exigidas por la ley aplicable.
 
 ## 12. Sus opciones
 
@@ -170,6 +188,7 @@ Puede gestionar sus datos y permisos de las siguientes formas:
 - revisar o cambiar las opciones de privacidad publicitaria disponibles desde los ajustes de la Aplicación
 - eliminar los datos de la Aplicación al desinstalarla
 - gestionar los datos conectados mediante las herramientas de la cuenta de Google, Google Drive y el calendario externo
+- cambiar los campos compartidos, eliminar relaciones y borrar la cuenta y los datos del servidor de Horario familiar desde la Aplicación o la página web de eliminación
 
 ## 13. Cambios en esta política
 

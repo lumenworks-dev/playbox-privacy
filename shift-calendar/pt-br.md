@@ -12,7 +12,7 @@ title: "Política de Privacidade do Calendário de Turnos"
 </nav>
 # Política de Privacidade do Calendário de Turnos
 
-Data de vigência: 31 de agosto de 2026
+Data de vigência: 20 de setembro de 2026
 
 Esta Política de Privacidade aplica-se aos aplicativos fornecidos pela LumenWorks:
 
@@ -24,7 +24,7 @@ A LumenWorks ("nós", "nos" ou "a desenvolvedora") valoriza a privacidade das pe
 
 ## 1. Informações que coletamos
 
-O Aplicativo não oferece cadastro de conta, e não coletamos separadamente informações pessoais diretas, como nome, número de documento nacional, número de telefone ou endereço.
+A maioria dos recursos não exige conta. Se você optar pelo recurso opcional Agenda Familiar, uma conta separada de compartilhamento do Firebase será criada pelo login do Google. O Firebase Authentication poderá tratar o identificador de usuário, endereço de e-mail, nome de exibição e outros dados necessários ao login. O Aplicativo não coleta nem armazena a senha da sua conta do Google.
 
 Para fornecer os recursos do Aplicativo, as seguintes informações podem ser armazenadas no seu dispositivo:
 
@@ -40,6 +40,8 @@ Para fornecer os recursos do Aplicativo, as seguintes informações podem ser ar
 - número de partidas, pontuações, recordes, progresso e configurações de áudio dos minijogos
 - status e data de vencimento dos benefícios de remoção de anúncios
 - estado interno usado para determinar intervalos de anúncios intersticiais e benefícios de anúncios recompensados
+
+Ao ativar a Agenda Familiar, o Firebase poderá armazenar identificadores de usuário, relações e convites, política e revisão de compartilhamento, fuso horário e horários de sincronização; além de datas, tipos, ordem, cores e horários de turnos, categorias e quantidades de presença e dados de horas extras que você escolher compartilhar. O Firebase App Check também poderá tratar informações técnicas de integridade do aplicativo e do dispositivo para prevenir abusos. Notas, salários, estimativas de pagamento, valores por hora, saldos de presença e conteúdo original de calendários externos não são enviados. Os documentos de relação não armazenam e-mail nem URL de foto.
 
 Exceto quando indicado nesta política, essas informações são usadas para fornecer os recursos do Aplicativo e não são transmitidas aos nossos próprios servidores.
 
@@ -57,6 +59,7 @@ O Aplicativo trata as informações descritas acima para:
 - fornecer um período sem anúncios após a visualização de um anúncio recompensado
 - aplicar configurações de recursos e políticas de funcionamento
 - prevenir erros e manter a estabilidade do serviço
+- compartilhar dados selecionados da agenda, mostrar agendas recebidas e gerenciar convites, relações e exclusão da conta
 
 ## 3. Permissões do Aplicativo
 
@@ -74,6 +77,10 @@ Se você optar pelo backup no Google Drive, a autorização da sua conta do Goog
 
 Se você optar pela integração com um calendário externo, o Aplicativo poderá solicitar permissões de leitura e gravação do calendário para listar calendários e eventos ou criar, atualizar e excluir notas e horários de trabalho no calendário escolhido. Esse recurso é opcional e as demais funções continuam disponíveis sem essas permissões. Os dados do calendário externo também estão sujeitos às políticas do provedor de calendário do dispositivo e da conta conectada.
 
+### D. Login da Agenda Familiar
+
+O login do Google para a Agenda Familiar é processado em um projeto separado do Firebase e não concede acesso ao backup do Google Drive. Sair ou excluir a conta compartilhada não apaga a agenda original armazenada no telefone.
+
 ## 4. Backup no Google Drive
 
 O Aplicativo fornece backup e restauração no Google Drive apenas quando você decide usar esse recurso.
@@ -84,6 +91,10 @@ O Aplicativo fornece backup e restauração no Google Drive apenas quando você 
 - Você pode criar manualmente um backup local.
 - Os backups podem incluir horários, presença, notas, configurações e outros dados necessários para usar o Aplicativo.
 - Não examinamos de forma arbitrária nem coletamos separadamente o conteúdo dos arquivos de backup armazenados no seu Google Drive.
+
+## 4-1. Compartilhamento da Agenda Familiar
+
+Os dados só são publicados no Firebase Firestore depois que você ativa o recurso e escolhe os campos a compartilhar. O intervalo publicado, segundo o fuso horário do emissor, inclui o mês anterior, o mês atual e os quatro meses seguintes. Os convites são de uso único e expiram em até 24 horas pela hora do servidor. O destinatário só lê os meses autorizados e perde o acesso futuro quando a relação é removida. O horário exato de horas extras fica desativado por padrão. O recurso usa somente a cota gratuita Spark do Firebase; ao atingir o limite, poderá ficar temporariamente indisponível, sem cobrança automática.
 
 ## 5. Serviços de publicidade
 
@@ -124,6 +135,7 @@ O Aplicativo pode usar os seguintes serviços de terceiros:
 - Google Drive: backup e restauração dos dados do Aplicativo
 - Google AdMob: publicidade no Aplicativo, medição de desempenho publicitário e gerenciamento de qualidade dos anúncios
 - Firebase Remote Config: configurações remotas de recursos e políticas de publicidade
+- Firebase Authentication, Firestore, App Check e Hosting: login opcional da Agenda Familiar, armazenamento e transferência de dados compartilhados, prevenção de abusos, convites e página de exclusão de conta
 - Google User Messaging Platform: gerenciamento do consentimento de publicidade e das opções de privacidade
 - provedor de calendário do dispositivo: leitura ou gravação de eventos somente para o recurso opcional de calendário externo
 
@@ -151,13 +163,19 @@ As informações sobre a aplicação e o vencimento do benefício de remoção d
 
 Os eventos criados pelo Aplicativo em um calendário externo podem permanecer nele depois que você desinstalar o Aplicativo. Você pode gerenciá-los pelos recursos de sincronização do Aplicativo ou pelo seu aplicativo de calendário.
 
+### E. Conta e dados do servidor da Agenda Familiar
+
+Você pode excluir a conta compartilhada e os dados do servidor no Aplicativo ou, sem reinstalá-lo, em `https://lumenworks-schedule-sharing.web.app/delete-account/` usando a mesma conta do Google. Relações, convites e meses publicados são removidos antes da conta do Firebase Authentication, que é excluída por último. Se o processo for interrompido, entre novamente com a mesma conta para continuar.
+
+Um registro mínimo do estado de exclusão poderá permanecer com o caminho do identificador do Firebase, o estado `DELETING` e horários do servidor, sem agenda, e-mail ou nome de exibição. Se a conta do Google for excluída primeiro, a limpeza feita pelo cliente poderá não terminar; use antes o fluxo de exclusão acima ou entre em contato caso perca o acesso.
+
 ## 10. Compartilhamento de informações pessoais
 
-Não coletamos diretamente suas informações pessoais para vendê-las ou fornecê-las a terceiros a nosso critério. Quando você usa um recurso opcional, serviços de terceiros, como Google Drive, Google AdMob e Firebase Remote Config, podem tratar informações de acordo com suas próprias políticas para fornecer esse recurso.
+Não vendemos suas informações pessoais nem as fornecemos a terceiros a nosso critério. Google Drive, Google AdMob, Firebase, login do Google e provedores de calendário poderão tratar informações para as finalidades descritas. Um destinatário da Agenda Familiar recebe somente os campos que você escolher compartilhar.
 
 ## 11. Privacidade de crianças e adolescentes
 
-O Aplicativo não fornece recursos separados de cadastro de conta ou coleta de informações pessoais direcionados a crianças e adolescentes. Se tomarmos conhecimento de que coletamos intencionalmente informações pessoais de uma criança ou adolescente em desacordo com a legislação aplicável, adotaremos as medidas exigidas pela lei aplicável.
+O recurso de conta da Agenda Familiar não é direcionado a menores de 14 anos. Se tomarmos conhecimento de que coletamos intencionalmente informações pessoais de uma criança ou adolescente em desacordo com a legislação aplicável, adotaremos as medidas exigidas pela lei aplicável.
 
 ## 12. Suas escolhas e direitos de privacidade
 
@@ -170,6 +188,7 @@ Você pode gerenciar seus dados e permissões das seguintes formas:
 - revisar ou alterar as opções disponíveis de privacidade de publicidade nas configurações do Aplicativo
 - excluir os dados do Aplicativo ao desinstalá-lo
 - gerenciar dados conectados pelas ferramentas da conta do Google, do Google Drive e do calendário externo
+- alterar os campos compartilhados, remover relações e excluir a conta e os dados do servidor da Agenda Familiar no Aplicativo ou na página web de exclusão
 
 Nos termos da Lei Geral de Proteção de Dados Pessoais (LGPD), você pode solicitar informações sobre o tratamento de dados pessoais que a LumenWorks controle, incluindo confirmação da existência de tratamento, acesso, correção de dados incompletos, inexatos ou desatualizados e, quando aplicável, anonimização, bloqueio, eliminação, portabilidade, informações sobre compartilhamento e revogação do consentimento. Para exercer esses direitos ou fazer uma solicitação de privacidade, entre em contato pelo e-mail indicado na seção 14. Pedidos relativos aos serviços de terceiros também podem exigir o uso dos canais próprios desses fornecedores.
 

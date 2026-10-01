@@ -12,7 +12,7 @@ title: "Shift Calendar Privacy Policy"
 </nav>
 # Shift Calendar Privacy Policy
 
-Effective date: August 31, 2026
+Effective date: September 20, 2026
 
 This Privacy Policy applies to the following apps provided by LumenWorks:
 
@@ -20,11 +20,11 @@ This Privacy Policy applies to the following apps provided by LumenWorks:
 - Shift Calendar for LG
 - Shift Calendar Plus
 
-LumenWorks ("we," "us," or "the developer") values the privacy of people who use these apps (collectively, the "App"). This policy explains what information may be processed in connection with the App's features, advertising, backup, and alarm services.
+LumenWorks ("we," "us," or "the developer") values the privacy of people who use these apps (collectively, the "App"). This policy explains what information may be processed in connection with the App's features, optional family-schedule sharing, advertising, backup, and alarm services.
 
 ## 1. Information we collect
 
-The App does not provide account registration, and we do not separately collect direct personal information such as your name, national identification number, phone number, or address.
+Most App features do not require an account. If you choose the optional Family Schedule feature, a separate Firebase sharing account is created through Google sign-in. Firebase Authentication may process the Google account user identifier, email address, display name, and other account information needed for sign-in. The App does not collect or store your Google Account password.
 
 To provide App features, the following information may be stored on your device:
 
@@ -40,6 +40,14 @@ To provide App features, the following information may be stored on your device:
 - minigame play counts, scores, high scores, progress, and audio settings
 - the status and expiry time of ad-removal benefits
 - internal state used to determine interstitial-ad intervals and rewarded-ad benefits
+
+If you enable Family Schedule, the following information may be transmitted to and stored in Firebase:
+
+- Firebase user identifiers, sharing relationships, invitation identifiers, sharing policy and revision values, time zone, and synchronization timestamps
+- work dates and the shift type, order, color, and time you choose to disclose; attendance categories and amounts; whether overtime occurred; and exact overtime time only when separately enabled
+- app and device-integrity technical information processed by Firebase App Check to prevent abuse
+
+Notes, wages, estimated pay, hourly rates, remaining attendance balances, and original external-calendar content are not uploaded to the Family Schedule service. Email addresses and photo URLs are not stored in Family Schedule relationship documents.
 
 Except where stated in this policy, this information is used to provide App features and is not transmitted to our own server.
 
@@ -57,6 +65,8 @@ The App processes the information described above to:
 - provide a period of ad removal after you view a rewarded ad
 - apply feature settings and operating policies
 - prevent errors and maintain service stability
+- share selected schedule information with family or acquaintances and display schedules shared with you
+- authenticate sharing accounts, prevent abuse, synchronize data, and delete sharing accounts
 
 ## 3. App permissions
 
@@ -74,6 +84,10 @@ If you choose Google Drive backup, Google account authorization and Google Drive
 
 If you choose external-calendar integration, the App may request calendar read and write permissions to list calendars and events or to create, update, and delete App notes or work schedules in a calendar you select. This feature is optional, and the rest of the App remains available if you do not grant these permissions. External-calendar data is also governed by the policies of your device calendar provider and any connected account.
 
+### D. Family Schedule Google sign-in
+
+If you choose to send or receive Family Schedules, Google sign-in through Firebase Authentication is used. Sign-in is processed in the Firebase project dedicated to Family Schedule and is separate from Google Drive backup authorization. Signing out or deleting the sharing account does not delete the original work schedule stored on your phone.
+
 ## 4. Google Drive backup
 
 The App provides Google Drive backup and restore only when you choose to use it.
@@ -84,6 +98,15 @@ The App provides Google Drive backup and restore only when you choose to use it.
 - You can create a local backup manually.
 - Backups may include schedules, attendance, notes, settings, and other data needed to use the App.
 - We do not arbitrarily view or separately collect the contents of backup files stored in your Google Drive.
+
+## 4-1. Family Schedule sharing
+
+- A Family Schedule is published to Firebase Firestore only after you enable the feature and select what to disclose.
+- The published range uses the publisher's time zone and covers the previous month, current month, and next four months. The App removes months that fall outside this window during maintenance.
+- Invitations are single-use and remain valid for no more than 24 hours. Server time rejects expired invitations immediately, and the App removes expired documents when it can.
+- Recipients can read only the allowed shared months. Future access ends when the relationship is removed. Shared cache already downloaded to a device is removed when the App confirms that the relationship ended or the sharing account was deleted.
+- Exact overtime time is off by default and is transmitted only when the publisher enables it separately.
+- This feature operates within the Firebase Spark free quota. If the quota is exhausted, only Family Schedule may be temporarily unavailable, without automatic charges.
 
 ## 5. Advertising services
 
@@ -124,6 +147,7 @@ The App may use the following third-party services:
 - Google Drive: App-data backup and restore
 - Google AdMob: in-app advertising, ad-performance measurement, and ad-quality management
 - Firebase Remote Config: remote feature and advertising-policy settings
+- Firebase Authentication, Firestore, App Check, and Hosting: optional Family Schedule sign-in, shared-data storage and transfer, abuse prevention, invitation landing, and account-deletion page
 - Google User Messaging Platform: advertising consent and privacy-choice management
 - device calendar provider: reading or writing events only for the external-calendar feature you choose
 
@@ -151,13 +175,19 @@ Information about the application and expiry of rewarded-ad ad-removal benefits 
 
 Events created by the App in an external calendar may remain in that calendar after you uninstall the App. You can manage them through the App's synchronization features or your calendar app.
 
+### E. Family Schedule account and server data
+
+You can request deletion of the sharing account and server-side sharing data from the Family Schedule management screen. Without reinstalling the App, you can sign in with the same Google account at `https://lumenworks-schedule-sharing.web.app/delete-account/`. The deletion flow removes relationships, invitations, and published months before deleting the Firebase Authentication account last. If you close the App or browser before it finishes, sign in again with the same account to resume.
+
+After authentication-account deletion, a minimal tombstone may remain to preserve and verify deletion state. It contains only the Firebase user-identifier path, `DELETING` state, and server timestamps; it does not contain schedules, email addresses, or display names. Because cleanup is client-only, deleting the Google account first may prevent automatic cleanup. Use the deletion flow above first, or contact us if you can no longer access the account.
+
 ## 10. Sharing of personal information
 
-We do not directly collect your personal information in order to sell it or provide it to third parties at our discretion. When you use an optional feature, third-party services such as Google Drive, Google AdMob, and Firebase Remote Config may process information under their own policies to provide that feature.
+We do not sell your personal information or provide it to third parties at our discretion. When you use an optional feature, Google Drive, Google AdMob, Firebase, Google sign-in, and calendar providers may process information under their policies and for the purposes described above. Only the schedule fields you select are shared with a Family Schedule recipient.
 
 ## 11. Children's privacy
 
-The App does not provide separate account registration or personal-information collection features for children under 14. If we learn that we have intentionally collected a child's personal information, we will take the steps required by applicable law.
+The Family Schedule account feature is not directed to children under 14. If we learn that we have intentionally collected a child's personal information, we will take the steps required by applicable law.
 
 ## 12. Your choices
 
@@ -170,6 +200,7 @@ You can manage your data and permissions by:
 - reviewing or changing available advertising privacy choices in App settings
 - deleting App data by uninstalling the App
 - managing connected data through Google Account, Google Drive, and external-calendar tools
+- changing Family Schedule disclosure settings, removing sharing relationships, and deleting the sharing account and server data in the App or on the deletion website
 
 ## 13. Changes to this policy
 
