@@ -1,18 +1,39 @@
 ---
-layout: default
+layout: shift-calendar-privacy
 title: "Shift Calendar プライバシーポリシー"
+lang: 'ja'
+direction: 'ltr'
+languages:
+  - { href: "index.html", lang: 'ko', label: "한국어", current: false }
+  - { href: "en.html", lang: 'en', label: "English", current: false }
+  - { href: "es.html", lang: 'es-ES', label: "Español (España)", current: false }
+  - { href: "es-419.html", lang: 'es-419', label: "Español (Latinoamérica)", current: false }
+  - { href: "ja.html", lang: 'ja', label: "日本語", current: true }
+  - { href: "pt-br.html", lang: 'pt-BR', label: "Português (Brasil)", current: false }
+  - { href: "pt-pt.html", lang: 'pt-PT', label: "Português (Portugal)", current: false }
+  - { href: "de.html", lang: 'de', label: "Deutsch", current: false }
+  - { href: "fr.html", lang: 'fr', label: "Français", current: false }
+  - { href: "it.html", lang: 'it', label: "Italiano", current: false }
+  - { href: "nl.html", lang: 'nl', label: "Nederlands", current: false }
+  - { href: "pl.html", lang: 'pl', label: "Polski", current: false }
+  - { href: "cs.html", lang: 'cs', label: "Čeština", current: false }
+  - { href: "ro.html", lang: 'ro', label: "Română", current: false }
+  - { href: "hu.html", lang: 'hu', label: "Magyar", current: false }
+  - { href: "tr.html", lang: 'tr', label: "Türkçe", current: false }
+  - { href: "hi.html", lang: 'hi', label: "हिन्दी", current: false }
+  - { href: "bn.html", lang: 'bn', label: "বাংলা", current: false }
+  - { href: "id.html", lang: 'id', label: "Bahasa Indonesia", current: false }
+  - { href: "vi.html", lang: 'vi', label: "Tiếng Việt", current: false }
+  - { href: "th.html", lang: 'th', label: "ไทย", current: false }
+  - { href: "uk.html", lang: 'uk', label: "Українська", current: false }
+  - { href: "zh-tw.html", lang: 'zh-Hant', label: "繁體中文", current: false }
+  - { href: "ar.html", lang: 'ar', label: "العربية", current: false }
+  - { href: "ur.html", lang: 'ur', label: "اردو", current: false }
 ---
 
-<nav class="language-nav" aria-label="Language">
-  <a href="index.html">한국어</a> ·
-  <a href="en.html">English</a> ·
-  <a href="es.html">Español</a> ·
-  <a href="ja.html">日本語</a> ·
-  <a href="pt-br.html">Português (Brasil)</a>
-</nav>
 # Shift Calendar プライバシーポリシー
 
-施行日: 2026年9月20日
+施行日: 2026年10月1日
 
 本プライバシーポリシーは、LumenWorks が提供する次のアプリに適用されます。
 
@@ -21,6 +42,8 @@ title: "Shift Calendar プライバシーポリシー"
 - Shift Calendar Plus
 
 LumenWorks（以下「当社」または「開発者」）は、これらのアプリ（以下、総称して「本アプリ」）を利用する方のプライバシーを大切にしています。本ポリシーでは、本アプリの機能、広告、バックアップ、アラームサービスに関連して処理される可能性のある情報を説明します。
+
+家族予定に関する規定は、この機能を提供するバージョンで、利用者が共有アカウントの接続または予定共有を選択した場合に適用されます。共有アカウントは Google で接続した時に作成され、自分の予定は共有を有効にした場合にのみアップロードされます。
 
 ## 1. 収集する情報
 
@@ -94,7 +117,12 @@ Google ログインは共有専用の Firebase プロジェクトで処理され
 
 ## 4-1. 「家族の予定」の共有
 
-利用者が機能を有効にして公開項目を選んだ場合に限り Firebase Firestore に掲載されます。掲載範囲は発行者のタイムゾーンを基準に前月、当月、将来4か月です。招待は1回限りで、サーバー時刻を基準に最大24時間で失効します。受信者は許可された月だけを読み取ることができ、関係を解除すると以後のアクセスはできません。正確な残業時間は初期設定で非公開です。本機能は Firebase Spark の無料枠のみで動作し、上限に達した場合は自動課金せず一時的に制限されることがあります。
+- 家族予定は、機能を有効にして公開項目を選択した後にのみ Firebase Firestore に公開されます。
+- 公開期間は発行者のタイムゾーンを基準に前月、当月、翌月から4か月分です。範囲外の月はアプリの保守処理で削除されます。
+- 招待は1回限りで、有効期間は最大24時間です。期限切れの招待はサーバー時刻で直ちに拒否し、期限切れの文書はアプリが可能な時点で削除します。
+- 受信者は許可された共有月のみ閲覧できます。関係を解除すると今後のアクセスは終了します。取得済みの共有キャッシュは、アプリが関係解除または共有アカウントの削除を確認した時点で削除されます。
+- 正確な残業時間は初期状態では非公開で、発行者が別途有効にした場合のみ送信されます。
+- 本機能は Firebase Spark の無料枠で運用されます。枠を使い切ると家族予定のみ一時的に利用できなくなる場合がありますが、自動課金はありません。
 
 ## 5. 広告サービス
 
@@ -200,4 +228,3 @@ Google Drive バックアップを利用した場合、バックアップデー�
 
 - 開発者: LumenWorks
 - メール: lumenworks.play@gmail.com
-

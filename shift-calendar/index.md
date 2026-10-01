@@ -1,18 +1,39 @@
 ---
-layout: default
-title: "교대달력 개인정보처리방침"
+layout: shift-calendar-privacy
+title: "교대달력 앱 개인정보처리방침"
+lang: 'ko'
+direction: 'ltr'
+languages:
+  - { href: "index.html", lang: 'ko', label: "한국어", current: true }
+  - { href: "en.html", lang: 'en', label: "English", current: false }
+  - { href: "es.html", lang: 'es-ES', label: "Español (España)", current: false }
+  - { href: "es-419.html", lang: 'es-419', label: "Español (Latinoamérica)", current: false }
+  - { href: "ja.html", lang: 'ja', label: "日本語", current: false }
+  - { href: "pt-br.html", lang: 'pt-BR', label: "Português (Brasil)", current: false }
+  - { href: "pt-pt.html", lang: 'pt-PT', label: "Português (Portugal)", current: false }
+  - { href: "de.html", lang: 'de', label: "Deutsch", current: false }
+  - { href: "fr.html", lang: 'fr', label: "Français", current: false }
+  - { href: "it.html", lang: 'it', label: "Italiano", current: false }
+  - { href: "nl.html", lang: 'nl', label: "Nederlands", current: false }
+  - { href: "pl.html", lang: 'pl', label: "Polski", current: false }
+  - { href: "cs.html", lang: 'cs', label: "Čeština", current: false }
+  - { href: "ro.html", lang: 'ro', label: "Română", current: false }
+  - { href: "hu.html", lang: 'hu', label: "Magyar", current: false }
+  - { href: "tr.html", lang: 'tr', label: "Türkçe", current: false }
+  - { href: "hi.html", lang: 'hi', label: "हिन्दी", current: false }
+  - { href: "bn.html", lang: 'bn', label: "বাংলা", current: false }
+  - { href: "id.html", lang: 'id', label: "Bahasa Indonesia", current: false }
+  - { href: "vi.html", lang: 'vi', label: "Tiếng Việt", current: false }
+  - { href: "th.html", lang: 'th', label: "ไทย", current: false }
+  - { href: "uk.html", lang: 'uk', label: "Українська", current: false }
+  - { href: "zh-tw.html", lang: 'zh-Hant', label: "繁體中文", current: false }
+  - { href: "ar.html", lang: 'ar', label: "العربية", current: false }
+  - { href: "ur.html", lang: 'ur', label: "اردو", current: false }
 ---
 
-<nav class="language-nav" aria-label="Language">
-  <a href="index.html">한국어</a> ·
-  <a href="en.html">English</a> ·
-  <a href="es.html">Español</a> ·
-  <a href="ja.html">日本語</a> ·
-  <a href="pt-br.html">Português (Brasil)</a>
-</nav>
 # 교대달력 앱 개인정보처리방침
 
-시행일: 2026년 9월 20일
+시행일: 2026년 10월 1일
 
 본 개인정보처리방침은 LumenWorks가 제공하는 다음 앱에 공통으로 적용됩니다.
 
@@ -21,6 +42,8 @@ title: "교대달력 개인정보처리방침"
 - 교대달력 플러스
 
 LumenWorks(이하 “개발자”)는 위 앱(이하 통칭하여 “본 앱”) 이용자의 개인정보를 중요하게 생각합니다. 본 방침은 본 앱의 기능, 가족 일정 공유, 광고, 백업, 외부 캘린더, 알람 및 미니게임과 관련하여 어떤 정보가 처리될 수 있는지 설명합니다.
+
+가족 일정 공유 관련 내용은 해당 기능을 제공하는 버전에서 사용자가 공유 계정 연결 또는 일정 공유를 선택한 경우에 적용됩니다. 공유 계정은 사용자가 Google 계정으로 연결할 때 생성되며, 본인 일정은 공유를 활성화한 경우에만 업로드됩니다.
 
 ## 1. 수집하는 정보
 
@@ -155,11 +178,15 @@ Google Drive 백업을 선택한 경우 앱 데이터의 백업과 복원을 위
 
 Google Drive 백업을 사용한 경우 백업 데이터는 사용자의 Google Drive에 저장됩니다. 앱을 제거해도 자동으로 삭제되지 않을 수 있으며 앱 또는 Google 계정의 Drive 관리 기능으로 관리할 수 있습니다.
 
-### C. 외부 캘린더
+### C. 보상형 광고 혜택 상태
+
+보상형 광고의 광고 제거 혜택 적용 상태와 만료 정보는 기능 제공을 위해 기기에 일정 기간 보관될 수 있습니다.
+
+### D. 외부 캘린더
 
 본 앱이 외부 캘린더에 생성한 일정은 앱을 제거해도 해당 캘린더에 남을 수 있습니다. 사용자는 앱의 동기화 기능 또는 캘린더 앱에서 이를 관리할 수 있습니다.
 
-### D. 가족 일정 공유 계정과 서버 데이터
+### E. 가족 일정 공유 계정과 서버 데이터
 
 앱의 가족 일정 관리 화면에서 공유 계정과 서버 공유 데이터 삭제를 요청할 수 있습니다. 앱을 설치하지 않은 경우 `https://lumenworks-schedule-sharing.web.app/delete-account/`에서 같은 Google 계정으로 로그인해 삭제할 수 있습니다. 삭제는 공유 관계·초대·게시 월을 먼저 지운 뒤 Firebase Authentication 계정을 마지막에 삭제합니다. 중간에 앱이나 브라우저를 닫으면 같은 계정으로 다시 로그인해 계속해야 합니다.
 
@@ -179,7 +206,8 @@ Google Drive 백업을 사용한 경우 백업 데이터는 사용자의 Google 
 
 - 앱에서 입력 데이터 수정 또는 삭제
 - Google Drive 백업 사용 여부 변경 및 백업 관리
-- 기기 설정에서 알림, 정확한 알람, 캘린더 읽기·쓰기 권한 변경
+- 기기 설정에서 알림, 정확한 알람 및 관련 알람 권한 변경
+- 기기 설정에서 캘린더 읽기·쓰기 권한 변경
 - 앱 설정에서 가능한 광고 개인정보 선택 확인 또는 변경
 - 앱 데이터 삭제 또는 앱 제거
 - Google 계정, Google Drive 및 외부 캘린더 앱에서 연결 데이터 관리
@@ -193,4 +221,3 @@ Google Drive 백업을 사용한 경우 백업 데이터는 사용자의 Google 
 
 - 개발자: LumenWorks
 - 이메일: lumenworks.play@gmail.com
-

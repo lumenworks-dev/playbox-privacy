@@ -1,18 +1,39 @@
 ---
-layout: default
+layout: shift-calendar-privacy
 title: "Política de Privacidade do Calendário de Turnos"
+lang: 'pt-BR'
+direction: 'ltr'
+languages:
+  - { href: "index.html", lang: 'ko', label: "한국어", current: false }
+  - { href: "en.html", lang: 'en', label: "English", current: false }
+  - { href: "es.html", lang: 'es-ES', label: "Español (España)", current: false }
+  - { href: "es-419.html", lang: 'es-419', label: "Español (Latinoamérica)", current: false }
+  - { href: "ja.html", lang: 'ja', label: "日本語", current: false }
+  - { href: "pt-br.html", lang: 'pt-BR', label: "Português (Brasil)", current: true }
+  - { href: "pt-pt.html", lang: 'pt-PT', label: "Português (Portugal)", current: false }
+  - { href: "de.html", lang: 'de', label: "Deutsch", current: false }
+  - { href: "fr.html", lang: 'fr', label: "Français", current: false }
+  - { href: "it.html", lang: 'it', label: "Italiano", current: false }
+  - { href: "nl.html", lang: 'nl', label: "Nederlands", current: false }
+  - { href: "pl.html", lang: 'pl', label: "Polski", current: false }
+  - { href: "cs.html", lang: 'cs', label: "Čeština", current: false }
+  - { href: "ro.html", lang: 'ro', label: "Română", current: false }
+  - { href: "hu.html", lang: 'hu', label: "Magyar", current: false }
+  - { href: "tr.html", lang: 'tr', label: "Türkçe", current: false }
+  - { href: "hi.html", lang: 'hi', label: "हिन्दी", current: false }
+  - { href: "bn.html", lang: 'bn', label: "বাংলা", current: false }
+  - { href: "id.html", lang: 'id', label: "Bahasa Indonesia", current: false }
+  - { href: "vi.html", lang: 'vi', label: "Tiếng Việt", current: false }
+  - { href: "th.html", lang: 'th', label: "ไทย", current: false }
+  - { href: "uk.html", lang: 'uk', label: "Українська", current: false }
+  - { href: "zh-tw.html", lang: 'zh-Hant', label: "繁體中文", current: false }
+  - { href: "ar.html", lang: 'ar', label: "العربية", current: false }
+  - { href: "ur.html", lang: 'ur', label: "اردو", current: false }
 ---
 
-<nav class="language-nav" aria-label="Language">
-  <a href="index.html">한국어</a> ·
-  <a href="en.html">English</a> ·
-  <a href="es.html">Español</a> ·
-  <a href="ja.html">日本語</a> ·
-  <a href="pt-br.html">Português (Brasil)</a>
-</nav>
 # Política de Privacidade do Calendário de Turnos
 
-Data de vigência: 20 de setembro de 2026
+Data de vigência: 1 de outubro de 2026
 
 Esta Política de Privacidade aplica-se aos aplicativos fornecidos pela LumenWorks:
 
@@ -21,6 +42,8 @@ Esta Política de Privacidade aplica-se aos aplicativos fornecidos pela LumenWor
 - Calendário de Turnos Plus (Shift Calendar Plus)
 
 A LumenWorks ("nós", "nos" ou "a desenvolvedora") valoriza a privacidade das pessoas que usam esses aplicativos (em conjunto, o "Aplicativo"). Esta política explica quais informações podem ser tratadas em relação aos recursos, anúncios, backups e alarmes do Aplicativo.
+
+As disposições da Agenda Familiar aplicam-se às versões que oferecem esse recurso e quando você escolhe conectar uma conta compartilhada ou ativar o compartilhamento. A conta é criada ao conectar pelo Google; sua própria agenda só é enviada depois que você ativa o compartilhamento.
 
 ## 1. Informações que coletamos
 
@@ -94,7 +117,12 @@ O Aplicativo fornece backup e restauração no Google Drive apenas quando você 
 
 ## 4-1. Compartilhamento da Agenda Familiar
 
-Os dados só são publicados no Firebase Firestore depois que você ativa o recurso e escolhe os campos a compartilhar. O intervalo publicado, segundo o fuso horário do emissor, inclui o mês anterior, o mês atual e os quatro meses seguintes. Os convites são de uso único e expiram em até 24 horas pela hora do servidor. O destinatário só lê os meses autorizados e perde o acesso futuro quando a relação é removida. O horário exato de horas extras fica desativado por padrão. O recurso usa somente a cota gratuita Spark do Firebase; ao atingir o limite, poderá ficar temporariamente indisponível, sem cobrança automática.
+- A agenda só é publicada no Firebase Firestore após a ativação e a seleção dos campos divulgados.
+- O intervalo usa o fuso horário do emissor e inclui o mês anterior, o atual e os quatro seguintes. O Aplicativo remove meses fora desse intervalo durante a manutenção.
+- Convites são de uso único e válidos por no máximo 24 horas. A hora do servidor rejeita imediatamente os convites vencidos; o Aplicativo remove os documentos vencidos quando possível.
+- Destinatários leem apenas os meses compartilhados permitidos. Remover a relação encerra o acesso futuro. O cache já baixado é removido quando o Aplicativo confirma o fim da relação ou a exclusão da conta compartilhada.
+- A duração exata das horas extras fica desativada por padrão e só é transmitida quando o emissor a ativa separadamente.
+- A função usa a cota gratuita Firebase Spark. Se ela acabar, somente a Agenda Familiar poderá ficar temporariamente indisponível, sem cobranças automáticas.
 
 ## 5. Serviços de publicidade
 
@@ -202,4 +230,3 @@ Para dúvidas sobre esta política, sobre o tratamento de informações pelo Apl
 
 - Desenvolvedora: LumenWorks
 - E-mail: lumenworks.play@gmail.com
-

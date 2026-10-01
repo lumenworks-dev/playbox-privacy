@@ -1,18 +1,39 @@
 ---
-layout: default
+layout: shift-calendar-privacy
 title: "Shift Calendar Privacy Policy"
+lang: 'en'
+direction: 'ltr'
+languages:
+  - { href: "index.html", lang: 'ko', label: "한국어", current: false }
+  - { href: "en.html", lang: 'en', label: "English", current: true }
+  - { href: "es.html", lang: 'es-ES', label: "Español (España)", current: false }
+  - { href: "es-419.html", lang: 'es-419', label: "Español (Latinoamérica)", current: false }
+  - { href: "ja.html", lang: 'ja', label: "日本語", current: false }
+  - { href: "pt-br.html", lang: 'pt-BR', label: "Português (Brasil)", current: false }
+  - { href: "pt-pt.html", lang: 'pt-PT', label: "Português (Portugal)", current: false }
+  - { href: "de.html", lang: 'de', label: "Deutsch", current: false }
+  - { href: "fr.html", lang: 'fr', label: "Français", current: false }
+  - { href: "it.html", lang: 'it', label: "Italiano", current: false }
+  - { href: "nl.html", lang: 'nl', label: "Nederlands", current: false }
+  - { href: "pl.html", lang: 'pl', label: "Polski", current: false }
+  - { href: "cs.html", lang: 'cs', label: "Čeština", current: false }
+  - { href: "ro.html", lang: 'ro', label: "Română", current: false }
+  - { href: "hu.html", lang: 'hu', label: "Magyar", current: false }
+  - { href: "tr.html", lang: 'tr', label: "Türkçe", current: false }
+  - { href: "hi.html", lang: 'hi', label: "हिन्दी", current: false }
+  - { href: "bn.html", lang: 'bn', label: "বাংলা", current: false }
+  - { href: "id.html", lang: 'id', label: "Bahasa Indonesia", current: false }
+  - { href: "vi.html", lang: 'vi', label: "Tiếng Việt", current: false }
+  - { href: "th.html", lang: 'th', label: "ไทย", current: false }
+  - { href: "uk.html", lang: 'uk', label: "Українська", current: false }
+  - { href: "zh-tw.html", lang: 'zh-Hant', label: "繁體中文", current: false }
+  - { href: "ar.html", lang: 'ar', label: "العربية", current: false }
+  - { href: "ur.html", lang: 'ur', label: "اردو", current: false }
 ---
 
-<nav class="language-nav" aria-label="Language">
-  <a href="index.html">한국어</a> ·
-  <a href="en.html">English</a> ·
-  <a href="es.html">Español</a> ·
-  <a href="ja.html">日本語</a> ·
-  <a href="pt-br.html">Português (Brasil)</a>
-</nav>
 # Shift Calendar Privacy Policy
 
-Effective date: September 20, 2026
+Effective date: October 1, 2026
 
 This Privacy Policy applies to the following apps provided by LumenWorks:
 
@@ -21,6 +42,8 @@ This Privacy Policy applies to the following apps provided by LumenWorks:
 - Shift Calendar Plus
 
 LumenWorks ("we," "us," or "the developer") values the privacy of people who use these apps (collectively, the "App"). This policy explains what information may be processed in connection with the App's features, optional family-schedule sharing, advertising, backup, and alarm services.
+
+Family Schedule provisions apply to versions that offer this feature and when you choose to connect a sharing account or enable schedule sharing. A sharing account is created when you connect through Google; your own schedule is uploaded only after you enable sharing.
 
 ## 1. Information we collect
 
@@ -212,4 +235,3 @@ For questions about this policy or the App's handling of information, contact:
 
 - Developer: LumenWorks
 - Email: lumenworks.play@gmail.com
-
